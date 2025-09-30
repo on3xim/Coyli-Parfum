@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наша компания - Присоединяйтесь к нам!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 15px 0;
+        }
+
+        nav li {
+            margin: 0 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+        }
+
+        .values {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .value-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            width: 250px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .value-card i {
+            font-size: 2rem;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        .form-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .required {
+            color: #e74c3c;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #3498db;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 10px 0;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Добро пожаловать в нашу компанию!</h1>
+            <p>Мы - команда профессионалов, стремящихся к инновациям и совершенству. Присоединяйтесь к нам и станьте частью нашего успеха!</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#values">Наши ценности</a></li>
+                <li><a href="#form">Анкета</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">О нашей компании</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Мы - динамично развивающаяся компания, работающая на рынке более 10 лет. Наша команда состоит из высококвалифицированных специалистов, которые стремятся к достижению выдающихся результатов.</p>
+                    <p>Мы ценим инновации, качество и профессиональный рост наших сотрудников. Наша компания создает уникальные продукты и услуги, которые меняют жизнь людей к лучшему.</p>
+                    <p>Присоединяясь к нам, вы становитесь частью дружной команды, где каждый сотрудник имеет возможность реализовать свой потенциал и влиять на развитие компании.</p>
+                </div>
+                <div class="about-image">
+                    [Изображение компании]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="values" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 class="section-title">Наши ценности</h2>
+            <div class="values">
+                <div class="value-card">
+                    <i>💡</i>
+                    <h3>Инновации</h3>
+                    <p>Мы постоянно ищем новые подходы и решения для достижения лучших результатов.</p>
+                </div>
+                <div class="value-card">
+                    <i>🤝</i>
+                    <h3>Командная работа</h3>
+                    <p>Мы верим, что совместными усилиями можем достичь большего, чем поодиночке.</p>
+                </div>
+                <div class="value-card">
+                    <i>🎯</i>
+                    <h3>Целеустремленность</h3>
+                    <p>Мы ставим амбициозные цели и упорно работаем для их достижения.</p>
+                </div>
+                <div class="value-card">
+                    <i>🌟</i>
+                    <h3>Качество</h3>
+                    <p>Мы стремимся к высочайшему качеству во всем, что делаем.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="form">
+        <div class="container">
+            <h2 class="section-title">Анкета для новых сотрудников</h2>
+            <div class="form-container">
+                <form id="application-form">
+                    <div class="form-group">
+                        <label for="fullname">ФИО <span class="required">*</span></label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Электронная почта <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Телефон <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="position">Желаемая должность <span class="required">*</span></label>
+                        <select id="position" name="position" required>
+                            <option value="">Выберите должность</option>
+                            <option value="developer">Разработчик</option>
+                            <option value="designer">Дизайнер</option>
+                            <option value="manager">Менеджер проекта</option>
+                            <option value="marketer">Маркетолог</option>
+                            <option value="analyst">Аналитик</option>
+                            <option value="other">Другая</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">Опыт работы (лет)</label>
+                        <input type="number" id="experience" name="experience" min="0" max="50">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="education">Образование</label>
+                        <input type="text" id="education" name="education">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="skills">Ключевые навыки</label>
+                        <textarea id="skills" name="skills" placeholder="Опишите ваши основные навыки и компетенции"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motivation">Почему вы хотите работать в нашей компании?</label>
+                        <textarea id="motivation" name="motivation" placeholder="Расскажите о вашей мотивации присоединиться к нашей команде"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="salary">Ожидания по заработной плате</label>
+                        <input type="text" id="salary" name="salary">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="startdate">Когда можете приступить к работе?</label>
+                        <input type="date" id="startdate" name="startdate">
+                    </div>
+
+                    <button type="submit" class="btn">Отправить анкету</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i>📍</i>
+                    <div>
+                        <h3>Адрес</h3>
+                        <p>г. Москва, ул. Примерная, д. 123</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i>📞</i>
+                    <div>
+                        <h3>Телефон</h3>
+                        <p>+7 (495) 123-45-67</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i>✉️</i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>hr@company.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Наша компания. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('application-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // В реальном приложении здесь был бы код для отправки данных на сервер
+            alert('Спасибо! Ваша анкета отправлена. Мы свяжемся с вами в ближайшее время.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
